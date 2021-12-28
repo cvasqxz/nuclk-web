@@ -3,43 +3,77 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Web3 Demo</title>
+    <title>NüCLK Boutique 🧐</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/brands.min.css" integrity="sha512-rQgMaFKZKIoTKfYInSVMH1dSM68mmPYshaohG8pK17b+guRbSiMl9dDbd3Sd96voXZeGerRIFFr2ewIiusEUgg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+      body { font-family: 'Quicksand', sans-serif; background-color: #EFCEA3; color: #171F25; }
+      .pink { color: #E94E77; text-decoration: none; }
+      a { color: #0F253A; text-decoration: underline; }
+      .cat { border-radius: 50%; }
+      .dark { background-color: #171f25; color: #efcea3; }
+      .band { border-radius: 10px; padding: 5px; text-decoration: none; }
+    </style>
   </head>
   <body>
     <section class="section is-large">
-      <div class="container">
-        <div id="prepare" class="content is-large has-text-centered">
-          <h1>Bienvenido</h1>
-          <p>Haz click en el cohete para conectarte a la red de Ethereum</p>
-          <button class="button is-rounded is-white is-large is-size-2" id="btn-connect">🚀</button>
+      <div class="has-text-centered animate__animated animate__zoomIn">
+        <div class="container content is-size-1">
+          <h1 class="title">N<span class="pink">ü</span>CLK</h1>
+          <p class="subtitle dark band">Clocks for the metaverse</p>
         </div>
-          
-        <div id="connected" style="display: none">
-          <button class="button is-danger" id="btn-disconnect">Disconnect wallet</button>
-          <div id="network">
-            <p><strong>Connected blockchain:</strong> <span id="network-name"></span></p>
-            <p><strong>Selected account:</strong> <span id="selected-account"></span></p>
-            <p><strong>Balance:</strong> <span id="account-balance"></span> Ξ</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- We use simple <template> templating for the example -->
-      <div id="templates" style="display: none">
-        <template id="template-balance">
-          <tr>
-            <th class="address"></th>
-            <td class="balance"></td>
-          </tr>
-        </template>
       </div>
     </section>
 
-    <script type="text/javascript" src="https://unpkg.com/web3@1.6.1/dist/web3.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.6.6/dist/umd/index.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
-    <script type="text/javascript" src="./example.js"></script>
+    <section class="section is-medium">
+      <div class="container has-text-justified animate__animated animate__zoomIn">
+        <div class="columns">
+          <div class="column is-one-third">
+            <img src="img/5708.png" class="cat" width="80%">
+          </div>
+          <div class="column content">
+            <h1 class="is-size-1 has-text-centered">Bienvenido</h1>
+            <p>Hi, my name is <a href="https://twitter.com/cvasqxz" target="_blank">César</a> and I'm the watchmaker of <a href="https://nuclk.art">NüCLK Boutique</a></p>
+            <p>At the beginning of 2017 I started my journey through the world of cryptocurrencies and blockchain technology, I have done <a href="https://chaucha.cl" target="_blank">several experiments</a> on Bitcoin and Ethereum and now I'm currently experimenting with NFTs</p>
+            <p>In 2021 I discovered many beautiful projects of onchain NFTs, where <a id="credits">dark wizards</a> dedicate their time and effort in building wonderful objects based on SVG and javascript, so I have decided to create this project as a tribute to all those people who have given me the tools and knowledge to create my own onchain NFT clock</p>
+            <p>Humans have been building clocks for centuries, from <a href="https://en.wikipedia.org/wiki/Sundial" target="_blank">sundials</a> to <a href="https://en.wikipedia.org/wiki/Smartwatch">smart watches</a>, and now we have the unique opportunity to create digital objects that will last for centuries in the blockchain</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section is-medium">
+      <div class="container has-text-justified animate__animated animate__zoomIn">
+        <div class="columns">
+          <div class="column content">
+            <h1 class="is-size-1 has-text-centered">La Boutique</h1>
+            <p>NüCLK is not a <a href="https://en.wikipedia.org/wiki/Generative_art" target="_blank">generative art</a> project, this is an NFT <a href="https://www.merriam-webster.com/dictionary/boutique" target="_blank">Boutique</a> of 100% handcrafted and unique NFT clocks, created with love by me and my NFT frens, to give you the opportunity to have one of the most amazing digital objects in the NFT space</p>
+            <p>I'm going to try to make at least 4 to 6 designs every year, and every drop will have a small supply (100 to 500) available to mint</p>
+            <p>The minting pricing of every new design is going to be based on the current <a href="https://dictionary.cambridge.org/dictionary/english/floor-price" target="_blank">floor price</a> of the last drop, so the market will have the full control on the pricing</p>
+            <p>Our first clock it's called <a href="img/genesis.svg">Génesis</a> and will be available to mint in January 2022</p>
+          </div>
+          <div class="column has-text-right is-one-third">
+            <object data="img/genesis.svg" width="90%">
+              <embed src="img/genesis.svg" width="90%"></embed>
+              Error: If you want to see NüCLK Génesis please <a href="img/genesis.svg">click here</a>
+            </object>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer dark">
+      <div class="content has-text-centered">
+        <p>
+          <a href="#" target="_blank"><img src="img/opensea.svg" width="50px"></a>
+          &nbsp;
+          <a href="https://twitter.com/nuclk/" target="_blank"><img src="img/twitter.svg" width="50px"></a>
+          &nbsp;
+          <a href="#" target="_blank"><img src="img/etherscan.svg" width="50px"></a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
