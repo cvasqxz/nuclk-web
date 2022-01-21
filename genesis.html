@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NüCLK Boutique 🧐</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/brands.min.css" integrity="sha512-rQgMaFKZKIoTKfYInSVMH1dSM68mmPYshaohG8pK17b+guRbSiMl9dDbd3Sd96voXZeGerRIFFr2ewIiusEUgg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+      body { font-family: 'Quicksand', sans-serif; }
+      .pink { color: #E94E77; text-decoration: none; }
+      a { color: #0F253A; text-decoration: underline; }
+      .cat { border-radius: 50%; }
+      .dark { background-color: #171f25; color: #efcea3; }
+      .band { border-radius: 10px; padding: 5px; text-decoration: none; }
+      .leather {background-color: #EFCEA3; color: #171F25; }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript" src="js/web3modal.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
+    <section class="hero is-fullheight leather">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <div class="columns is-vcentered">
+            <div class="column is-half">
+                <h1 class="title is-size-1">N<span class="pink">ü</span>CLK <i>Génesis</i></h1>
+                <p class="subtitle">Public minting open until January 31, 2022</p>
+                <div class="content">
+                  <button id="connect" class="button is-large is-fullwidth is-rounded dark band">Connect your wallet here</button>
+                  <div id="disconnect-div" style="display:none">
+                    <p>
+                      <span id="selected-account"></span><br/>
+                      <span id="clocks-available"></span><br/>
+                      <span id="mint-cost"></span>
+                    </p>
+                    <button id="mint" class="button is-large is-fullwidth is-rounded dark band">Mint&nbsp;<b>NüCLK <i>Génesis</i></b></button>
+                    <br/>
+                    <button id="disconnect" class="button is-fullwidth is-rounded dark band">Disconnect</button>
+                  </div>
+                </div>
+            </div>
+            <div class="column">
+              <object data="img/genesis.svg" width="100%">
+                <embed src="img/genesis.svg" width="100%"></embed>
+                Error: If you want to see NüCLK Génesis please <a href="img/genesis.svg">click here</a>
+              </object>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript">
+      const contractAddress = "0x7C139693EE611cEe9993a53D6580a99b18377C2F";
+      const Web3Modal = window.Web3Modal.default;
+      const WalletConnectProvider = window.WalletConnectProvider.default;
+      const evmChains = window.evmChains;
+      const providerOptions = {
+        walletconnect: {
+          package: WalletConnectProvider,
+          options: {
+            infuraId: "310ce498cc35467686babfa9585b8285",
+          }
+        }
+      };
+
+      let web3Modal = new Web3Modal({
+        cacheProvider: true,
+        providerOptions,
+        disableInjectedProvider: false,
+      });
+
+      async function mintGenesis() {
+          const web3 = new Web3(provider);
+          let mintCall = web3.eth.abi.encodeFunctionCall({name: 'mint', type: 'function', inputs: []}, []);
+          let mintResp = await web3.eth.sendTransaction({"from": addr, "to": contractAddress, "data": mintCall, "value": web3.utils.toWei("0.07")});
+      }
+
+      async function fetchAccountData() {
+        const web3 = new Web3(provider);
+        const accounts = await web3.eth.getAccounts();
+        const chainId = await web3.eth.getChainId();
+        if (chainId == 1) { 
+          addr = accounts[0];
+          document.querySelector("#selected-account").textContent = "Loading ETH Balance...";
+          const balance = await web3.eth.getBalance(addr);
+          const ethBalance = web3.utils.fromWei(balance, "ether");
+          document.querySelector("#selected-account").textContent = "Balance: " + parseFloat(ethBalance).toFixed(4) + " ETH";
+          let totalSupplyCall = web3.eth.abi.encodeFunctionCall({name: 'totalSupply', type: 'function', inputs: []}, []);
+          let supplyResp = await web3.eth.call({"to": contractAddress, "data": totalSupplyCall});
+          let clockSupply = web3.eth.abi.decodeParameter('int256', supplyResp);
+          document.querySelector("#clocks-available").textContent = "Génesis available: " + clockSupply + "/250";
+          document.querySelector("#mint-cost").textContent = "Minting cost: 0.07 ETH";
+        } else {
+          alert("Error, please connect to the Ethereum mainnet");
+          document.querySelector("#mint").style.display = "none";
+        }
+      }
+
+      async function refreshAccountData() {
+        await fetchAccountData(provider);
+      }
+
+      async function onConnect() {
+        document.querySelector("#disconnect").style.display = "block";
+        document.querySelector("#disconnect-div").style.display = "block";
+        document.querySelector("#connect").style.display = "none";
+
+        try {
+          provider = await web3Modal.connect();
+        } catch(e) {
+          console.log("Could not get a wallet connection", e);
+          return;
+        }
+
+        provider.on("accountsChanged", (accounts) => {fetchAccountData();});
+        provider.on("chainChanged", (chainId) => {fetchAccountData();});
+        provider.on("networkChanged", (networkId) => {fetchAccountData();});
+
+        await refreshAccountData();
+      }
+
+
+      async function onDisconnect() {
+        if(provider.close) {
+          await provider.close();
+          await web3Modal.clearCachedProvider();
+          provider = null;
+        }
+
+        addr = null;
+
+        document.querySelector("#selected-account").textContent = "";
+        document.querySelector("#clocks-available").textContent = "";
+        document.querySelector("#mint-cost").textContent = "";
+        document.querySelector("#disconnect").style.display = "none";
+        document.querySelector("#disconnect-div").style.display = "none";
+        document.querySelector("#connect").style.display = "block";
+      }
+
+      window.addEventListener('load', async () => {
+        document.querySelector("#connect").addEventListener("click", onConnect);
+        document.querySelector("#disconnect").addEventListener("click", onDisconnect);
+        document.querySelector("#mint").addEventListener("click", mintGenesis);
+      });
+
+    </script>
+  </body>
+</html>
