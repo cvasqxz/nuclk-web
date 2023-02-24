@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 450 450" style="background: #111;">
+
+<defs>
+    <g id="clk">
+        <circle cx="35" cy="35" r="15" fill="none" stroke-miterlimit="10" stroke-width="2"/>
+        <line x1="35" y1="23" x2="35" y2="37" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75">
+            <animateTransform attributeName="transform" type="rotate" from="0 35 35" to="360 35 35" dur="1s" repeatCount="indefinite"/>
+        </line>
+        <line x1="35" y1="26" x2="35" y2="37" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75">
+            <animateTransform attributeName="transform" type="rotate" from="0 35 35" to="360 35 35" dur="60s" repeatCount="indefinite"/>
+        </line>
+
+        <circle cx="35" cy="35" r="1.5" fill="#E94E77"/>
+
+        <animate attributeName="stroke" values="#EEE;#CCC;#EEE" dur="0.05s" repeatCount="indefinite"/>
+    </g>
+</defs>
+
+<rect x="0" y="0" width="450" height="450" fill="#111"/>
+
+<circle cx="100" cy="100" r="15" id="2-1" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="150" cy="100" r="15" id="3-1" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="200" cy="100" r="15" id="4-1" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="250" cy="100" r="15" id="5-1" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="300" cy="100" r="15" id="6-1" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="350" cy="100" r="15" id="7-1" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="100" cy="150" r="15" id="2-2" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="150" cy="150" r="15" id="3-2" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="200" cy="150" r="15" id="4-2" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="250" cy="150" r="15" id="5-2" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="300" cy="150" r="15" id="6-2" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="350" cy="150" r="15" id="7-2" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="100" cy="200" r="15" id="2-3" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="150" cy="200" r="15" id="3-3" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="200" cy="200" r="15" id="4-3" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="250" cy="200" r="15" id="5-3" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="300" cy="200" r="15" id="6-3" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="350" cy="200" r="15" id="7-3" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="100" cy="250" r="15" id="2-4" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="150" cy="250" r="15" id="3-4" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="200" cy="250" r="15" id="4-4" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="250" cy="250" r="15" id="5-4" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="300" cy="250" r="15" id="6-4" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+<circle cx="350" cy="250" r="15" id="7-4" fill="#E94E77"><animate attributeName="fill" values="#E94E77;#B61B44;#E94E77" dur="0.05s" repeatCount="indefinite"/></circle>
+
+<g transform="translate(65, 65) scale(1)"><use id="clk-2-1" href="#clk"></use></g>
+<g transform="translate(115, 65) scale(1)"><use id="clk-3-1" href="#clk"></use></g>
+<g transform="translate(165, 65) scale(1)"><use id="clk-4-1" href="#clk"></use></g>
+<g transform="translate(215, 65) scale(1)"><use id="clk-5-1" href="#clk"></use></g>
+<g transform="translate(265, 65) scale(1)"><use id="clk-6-1" href="#clk"></use></g>
+<g transform="translate(315, 65) scale(1)"><use id="clk-7-1" href="#clk"></use></g>
+<g transform="translate(65, 115) scale(1)"><use id="clk-2-2" href="#clk"></use></g>
+<g transform="translate(115, 115) scale(1)"><use id="clk-3-2" href="#clk"></use></g>
+<g transform="translate(165, 115) scale(1)"><use id="clk-4-2" href="#clk"></use></g>
+<g transform="translate(215, 115) scale(1)"><use id="clk-5-2" href="#clk"></use></g>
+<g transform="translate(265, 115) scale(1)"><use id="clk-6-2" href="#clk"></use></g>
+<g transform="translate(315, 115) scale(1)"><use id="clk-7-2" href="#clk"></use></g>
+<g transform="translate(65, 165) scale(1)"><use id="clk-2-3" href="#clk"></use></g>
+<g transform="translate(115, 165) scale(1)"><use id="clk-3-3" href="#clk"></use></g>
+<g transform="translate(165, 165) scale(1)"><use id="clk-4-3" href="#clk"></use></g>
+<g transform="translate(215, 165) scale(1)"><use id="clk-5-3" href="#clk"></use></g>
+<g transform="translate(265, 165) scale(1)"><use id="clk-6-3" href="#clk"></use></g>
+<g transform="translate(315, 165) scale(1)"><use id="clk-7-3" href="#clk"></use></g>
+<g transform="translate(65, 215) scale(1)"><use id="clk-2-4" href="#clk"></use></g>
+<g transform="translate(115, 215) scale(1)"><use id="clk-3-4" href="#clk"></use></g>
+<g transform="translate(165, 215) scale(1)"><use id="clk-4-4" href="#clk"></use></g>
+<g transform="translate(215, 215) scale(1)"><use id="clk-5-4" href="#clk"></use></g>
+<g transform="translate(265, 215) scale(1)"><use id="clk-6-4" href="#clk"></use></g>
+<g transform="translate(315, 215) scale(1)"><use id="clk-7-4" href="#clk"></use></g>
+
+<g transform="translate(-6, -185) scale(3.5)" fill="#444" stroke-width="0.25" stroke="#444">
+    <path d="M64.85 141.4h0q.07 0 .11.04.04.05.04.11h0v5.27q0 .09-.05.14-.05.04-.12.04h0q-.03 0-.07-.02-.03-.01-.06-.04h0l-3.71-5.08.11-.05v5.05q0 .06-.04.1-.04.04-.11.04h0q-.07 0-.11-.04-.04-.04-.04-.1h0v-5.3q0-.09.05-.12.05-.04.09-.04h0q.04 0 .07.01.03.01.05.05h0l3.7 5.04-.06.16v-5.11q0-.06.04-.11.05-.04.11-.04zm4.63 1.61h0q.07 0 .12.05.04.04.04.11h0v2.33q0 .77-.44 1.16-.43.39-1.15.39h0q-.71 0-1.15-.39-.44-.39-.44-1.16h0v-2.33q0-.07.05-.11.05-.05.11-.05h0q.08 0 .12.05.04.04.04.11h0v2.33q0 .6.34.92.34.32.93.32h0q.59 0 .93-.32.34-.32.34-.92h0v-2.33q0-.07.04-.11.05-.05.12-.05zm-.77-.8h0q-.13 0-.2-.08-.08-.08-.08-.21h0v-.06q0-.13.08-.21.08-.08.21-.08h0q.11 0 .19.08.07.08.07.21h0v.06q0 .13-.07.21-.08.08-.2.08zm-1.3 0h0q-.13 0-.21-.08-.07-.08-.07-.21h0v-.06q0-.13.08-.21.08-.08.21-.08h0q.11 0 .18.08.08.08.08.21h0v.06q0 .13-.08.21-.07.08-.19.08z"/>
+    <path transform="translate(-169, -4)" d="M235.06 153.86h0q-.07.05-.08.11 0 .06.04.13h0q.04.05.1.06.06 0 .11-.03h0q.34-.23.73-.37.4-.14.85-.14h0q.51 0 .95.19.45.19.78.53.34.35.53.82.19.47.19 1.04h0q0 .57-.19 1.04-.19.47-.53.82-.33.34-.78.53-.44.19-.95.19h0q-.45 0-.84-.14-.39-.14-.73-.36h0q-.06-.04-.12-.03-.06.01-.1.06h0q-.04.06-.04.12.01.07.07.11h0q.19.13.48.26.29.13.62.2.33.08.66.08h0q.57 0 1.08-.22.5-.21.89-.6.38-.39.6-.91.22-.53.22-1.15h0q0-.62-.22-1.15-.22-.52-.6-.91-.39-.39-.89-.6-.51-.22-1.08-.22h0q-.49 0-.94.14-.45.15-.81.4zm-1.38-.62v5.6q0 .06.05.11.05.05.11.05h0q.07 0 .12-.05.04-.05.04-.11h0v-5.6q0-.06-.05-.11-.05-.05-.11-.05h0q-.07 0-.12.05-.04.05-.04.11h0zm-1.57 5.76h0q.07 0 .12-.05.04-.05.04-.11h0v-5.6q0-.06-.04-.11-.05-.05-.12-.05h0q-.07 0-.11.05-.05.05-.05.11h0v5.6q0 .06.05.11.04.05.11.05zm-2.77-4.04h0q-.07 0-.12.05-.04.05-.04.12h0q0 .07.05.12h0l2.78 2.31.01-.38-2.58-2.17q-.05-.05-.1-.05zm-.05 4.04h0q.06 0 .12-.06h0l1.93-2.06-.24-.21-1.92 2.05q-.05.05-.05.12h0q0 .08.06.12.07.04.1.04z"/>
+    <animate attributeName="stroke" values="#444;#222;#444" dur="0.05s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#444;#222;#444" dur="0.05s" repeatCount="indefinite"/>
+</g>
+
+<script type="text/javascript">
+    <![CDATA[
+        setInterval(clock, 1000);
+        
+        var d = new Date;
+        var secs = d.getSeconds();
+        var mins = d.getMinutes();
+        var hrs = d.getHours();
+
+        function clock() {
+            if (secs < 59) { secs++; } else { secs = 0; mins++; }
+            if (mins == 60) { mins = 0; hrs++; }
+            if (hrs == 24) { hrs == 0; }
+
+            updateSegments(6, secs);
+            updateSegments(4, mins);
+            updateSegments(2, hrs);
+        }
+
+        function updateSegments(pos, t) {
+            let firstSegment = Number(parseInt(t%10)).toString(2).padStart(4, "0");
+            let secondSegment = Number(parseInt(t/10)).toString(2).padStart(4, "0");
+
+            for (let i = 0; i < 4; i++) {
+                document.getElementById((pos) + "-" + (i+1)).setAttribute("visibility", secondSegment[i] == "1" ? "visible" : "hidden");
+                document.getElementById((pos + 1) + "-" + (i+1)).setAttribute("visibility", firstSegment[i] == "1" ? "visible" : "hidden");
+            }
+        }
+    ]]>
+</script>
+
+</svg>
